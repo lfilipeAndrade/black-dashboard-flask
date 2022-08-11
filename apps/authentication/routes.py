@@ -27,6 +27,9 @@ def route_default():
 
 @blueprint.route('/login', methods=['GET', 'POST'])
 def login():
+    print(request.form)
+    print(current_user.is_authenticated)
+    
     login_form = LoginForm(request.form)
     if 'login' in request.form:
 
